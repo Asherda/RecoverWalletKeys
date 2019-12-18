@@ -65,6 +65,9 @@ jobs:
         cd dist
         Compress-Archive -Path D:\a\RecoverWalletKeys\RecoverWalletKeys\dist\recoverwallet -DestinationPath D:\a\RecoverWalletKeys\RecoverWalletKeys\dist\RecoverWalletWindows.zip
         Get-FileHash RecoverWalletWindows.zip
+        bash
+        sha256sum RecoverWalletWindows.zip > RecoverWalletWindows.zip.sha256
+
     - name: Upload build artifact
       uses: actions/upload-artifact@v1
       with:
